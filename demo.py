@@ -16,13 +16,14 @@ parser.add_argument('--dataset', type=str, default='citys',
 parser.add_argument('--weights-folder', default='./weights',
                     help='Directory for saving checkpoint models')
 parser.add_argument('--input-pic', type=str,
-                    default='./datasets/citys/leftImg8bit/test/berlin/berlin_000000_000019_leftImg8bit.png',
+                    default='./png/frankfurt_000001_058914_leftImg8bit.png',
                     help='path to the input picture')
 parser.add_argument('--outdir', default='./test_result', type=str,
                     help='path to save the predict result')
 
 parser.add_argument('--cpu', dest='cpu', action='store_true')
-parser.set_defaults(cpu=False)
+# コマンドライン引数cpuのデフォルト値をTrueに設定しています。
+parser.set_defaults(cpu=True)
 
 args = parser.parse_args()
 
@@ -53,3 +54,19 @@ def demo():
 
 if __name__ == '__main__':
     demo()
+
+
+
+"""
+Moves and/or casts the parameters and buffers.
+
+This can be called as
+
+Its signature is similar to torch.Tensor.to, but only accepts
+floating point or complex dtype\ s. In addition, this method will
+only cast the floating point or complex parameters and buffers to dtype (if given). The integral parameters and buffers will be moved
+device, if that is given, but with dtypes unchanged. When
+non_blocking is set, it tries to convert/move asynchronously with respect to the host if possible, e.g., moving CPU Tensors with pinned memory to CUDA devices.
+
+See below for examples.
+"""
