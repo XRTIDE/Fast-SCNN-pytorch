@@ -28,6 +28,7 @@ def get_color_pallete(npimg, dataset='citys'):
         out_img.putpalette(adepallete)
         return out_img
     elif dataset == 'citys':
+        # セマンティック映像を生成する。
         out_img = Image.fromarray(npimg.astype('uint8'))
         out_img.putpalette(cityspallete)
         return out_img

@@ -55,18 +55,3 @@ def demo():
 if __name__ == '__main__':
     demo()
 
-
-
-"""
-Moves and/or casts the parameters and buffers.
-
-This can be called as
-
-Its signature is similar to torch.Tensor.to, but only accepts
-floating point or complex dtype\ s. In addition, this method will
-only cast the floating point or complex parameters and buffers to dtype (if given). The integral parameters and buffers will be moved
-device, if that is given, but with dtypes unchanged. When
-non_blocking is set, it tries to convert/move asynchronously with respect to the host if possible, e.g., moving CPU Tensors with pinned memory to CUDA devices.
-
-See below for examples.
-"""
