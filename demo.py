@@ -16,7 +16,7 @@ parser.add_argument('--dataset', type=str, default='citys',
 parser.add_argument('--weights-folder', default='./weights',
                     help='Directory for saving checkpoint models')
 parser.add_argument('--input-pic', type=str,
-                    default='./png/frankfurt_000001_058914_leftImg8bit.png',
+                    default='./png/jo.png',
                     help='path to the input picture')
 parser.add_argument('--outdir', default='./test_result', type=str,
                     help='path to save the predict result')
